@@ -54,6 +54,8 @@ def analyze_data():
             print(datetime.now(), "Sending alert to {} {}".format(topic, variable))
             client.publish(topic, message)
             alerts += 1
+            
+        print(variable, item["check_value"], "min:", min_value, "max:", max_value, "alert:", alert)
 
     print(len(aggregation), "dispositivos revisados")
     print(alerts, "alertas enviadas")
