@@ -16,6 +16,7 @@ def analyze_data():
     # Compara el promedio con los valores límite que están en la base de datos para esa variable.
     # Si el promedio se excede de los límites, se envia un mensaje de alerta.
 
+    print("")
     print("Calculando alertas...")
 
     data = Data.objects.filter(
