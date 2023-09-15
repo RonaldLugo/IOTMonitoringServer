@@ -55,7 +55,7 @@ def analyze_data():
             client.publish(topic, message)
             alerts += 1
             
-        print(variable, item["check_value"], "min:", min_value, "max:", max_value, "alert:", alert)
+        print(variable, "avg: ", item["check_value"], "min:", min_value, "max:", max_value, "alert:", alert)
 
     print(len(aggregation), "dispositivos revisados")
     print(alerts, "alertas enviadas")
